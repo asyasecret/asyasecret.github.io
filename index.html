@@ -38,6 +38,8 @@ a{color:inherit}
 .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
 header{max-width:1120px;margin:0 auto;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
 .mark{font-family:var(--mark);font-size:17px;letter-spacing:.3em;white-space:nowrap}
+.tag{font-family:var(--display);font-style:italic;font-size:17px;color:var(--wine);white-space:nowrap;margin:0 2px 0 auto;letter-spacing:.01em}
+@media (max-width:560px){header{flex-wrap:wrap;row-gap:2px}.tag{order:3;flex-basis:100%;margin:0;font-size:15px}}
 .tline{font-size:12px;letter-spacing:.04em;white-space:nowrap;color:var(--wine)}
 .tline b{font-family:var(--display);font-weight:500;font-size:15px;font-variant-numeric:lining-nums tabular-nums}
 .eyebrow{font-family:var(--display);font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:var(--wine);margin:0 0 12px}
@@ -380,7 +382,8 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
 <button class="goat" id="goat" type="button" aria-label="Секрет: золотая козочка" hidden><i></i><img src="assets/goat.webp" alt="" width="240" height="222"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 0Q10 10 20 10Q10 10 10 20Q10 10 0 10Q10 10 10 0Z" fill="#FFF6D6"/></svg></button>
 <header>
   <span class="mark">ASYA SECRET</span>
-  <span class="hdr-r"><span class="tline"><span class="lbl">3 900 ₽ · ещё </span><b class="tt">–</b></span>
+  <span class="tag">2027 — год твоего блога</span>
+  <span class="hdr-r">
   <button class="snd" id="snd" type="button" aria-pressed="false" aria-label="Звук музыкальной шкатулки"><svg class="off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><svg class="on" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></span>
 </header>
 
