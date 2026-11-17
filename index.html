@@ -14,7 +14,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Manrope:wght@400;500;600;700&family=Prata&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Manrope:wght@400;500;600;700&family=Prata&display=swap" rel="stylesheet">
 <style>
 :root{
   /* layout idea: a sealed bordeaux case on ivory; the ribbon and wax seal open it, inside is the advent cover with 12 windows that slide out like drawers */
@@ -38,8 +38,8 @@ a{color:inherit}
 .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
 header{max-width:1120px;margin:0 auto;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
 .mark{font-family:var(--mark);font-size:17px;letter-spacing:.3em;white-space:nowrap}
-.tag{font-family:var(--display);font-style:italic;font-size:17px;color:var(--wine);white-space:nowrap;margin:0 2px 0 auto;letter-spacing:.01em}
-@media (max-width:560px){header{flex-wrap:wrap;row-gap:2px}.tag{order:3;flex-basis:100%;margin:0;font-size:15px}}
+.tag{font-family:var(--display);font-style:italic;font-weight:600;font-size:19px;color:var(--bordeaux);white-space:nowrap;margin:0 2px 0 auto;letter-spacing:.01em}
+@media (max-width:560px){header{flex-wrap:wrap;row-gap:2px}.tag{order:3;flex-basis:100%;margin:0;font-size:16.5px}.hero{padding-bottom:30px}#team{padding-top:46px}}
 .tline{font-size:12px;letter-spacing:.04em;white-space:nowrap;color:var(--wine)}
 .tline b{font-family:var(--display);font-weight:500;font-size:15px;font-variant-numeric:lining-nums tabular-nums}
 .eyebrow{font-family:var(--display);font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:var(--wine);margin:0 0 12px}
@@ -382,7 +382,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
 <button class="goat" id="goat" type="button" aria-label="Секрет: золотая козочка" hidden><i></i><img src="assets/goat.webp" alt="" width="240" height="222"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 0Q10 10 20 10Q10 10 10 20Q10 10 0 10Q10 10 10 0Z" fill="#FFF6D6"/></svg></button>
 <header>
   <span class="mark">ASYA SECRET</span>
-  <span class="tag">2027 — год твоего блога</span>
+  <span class="tag">2027 — год взрывного роста твоего блога</span>
   <span class="hdr-r">
   <button class="snd" id="snd" type="button" aria-pressed="false" aria-label="Звук музыкальной шкатулки"><svg class="off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><svg class="on" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></span>
 </header>
@@ -1035,6 +1035,10 @@ var OPEN=[0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21];
     var hero=contentBox(document.querySelector('.hero'));
     wp.push([cx+(side-cx)*.55, box.b+34,0],[side, box.b+78,0],[side, Math.max(box.b+120,hero.b-20),0]);
     var loopR=Math.max(18,Math.min(40,gut*.45));
+    (function(){ var nb0=contentBox(secs[0]), g0=hero.b, g1=nb0.t, gm=(g0+g1)/2, other=side===L?R:L, dir=side===L?1:-1, c0=side+dir*loopR, cy0=g0+(g1-g0)*.42;
+      wp.push([side,g0+(g1-g0)*.12,1]);
+      for(var k=1;k<=10;k++){ var ph=dir>0?Math.PI-k/10*6.2832:k/10*6.2832; wp.push([c0+Math.cos(ph)*loopR, cy0+Math.sin(ph)*loopR*.8,1]); }
+      wp.push([(side+other)/2, gm+(g1-g0)*.1,1],[other,g0+(g1-g0)*.86,1]); side=other; })();
     secs.forEach(function(sec,i){
       var cbx=contentBox(sec), next=secs[i+1]||night, nb=next===night?{t:nightTop}:contentBox(next);
       wp.push([side,cbx.t+10,0],[side,cbx.b-10,0]);
@@ -1042,8 +1046,6 @@ var OPEN=[0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21];
       if(!crossHere) return;
       var g0=cbx.b, g1=nb.t, gm=(g0+g1)/2, other=side===L?R:L, dir=side===L?1:-1;
       wp.push([side,g0+(g1-g0)*.18,1]);
-      if(i===0){ var c0=side+dir*loopR, cy0=g0+(g1-g0)*.42;
-        for(var k=1;k<=10;k++){ var ph=dir>0?Math.PI-k/10*6.2832:k/10*6.2832; wp.push([c0+Math.cos(ph)*loopR, cy0+Math.sin(ph)*loopR*.8,1]); } }
       wp.push([(side+other)/2, gm+(g1-g0)*.12,1],[other,g0+(g1-g0)*.82,1]);
       side=other;
     });
