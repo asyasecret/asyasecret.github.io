@@ -285,6 +285,9 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
 .moon .mc{position:absolute;inset:0;width:100%;height:100%;display:block}
 .treebox{position:relative;z-index:2;display:flex;justify-content:center;margin:10px auto -60px;pointer-events:none}
 .tree{display:block;width:clamp(170px,22vw,250px);height:clamp(250px,30vw,340px)}
+@keyframes call{0%{box-shadow:0 0 0 0 rgba(246,223,164,.8);transform:scale(1)}35%{transform:scale(1.05)}100%{box-shadow:0 0 0 24px rgba(246,223,164,0);transform:scale(1)}}
+.btn.call{animation:call 1.3s ease-out 2}
+@media (prefers-reduced-motion:reduce){.btn.call{animation:none;outline:2px solid #F6DFA4;outline-offset:4px}}
 #sky{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:6}
 .goat{position:absolute;left:0;top:0;width:44px;height:80px;padding:0;margin:0;border:0;background:none;cursor:pointer;z-index:3;transform-origin:22px 0;will-change:transform;-webkit-tap-highlight-color:transparent}
 .goat i{position:absolute;left:21.5px;top:0;width:1px;background:linear-gradient(#B8935A,#C9A464)}
@@ -406,7 +409,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
       <p class="eyebrow">Новогодний адвент для блогеров</p>
       <h1>Секретный адвент, который превращает твой ИИ в команду из 7 помощников</h1>
       <p class="lead">12 окошек — 12 готовых скиллов для твоего ИИ. Он монтирует твои рилс, пишет сценарии и посты твоим голосом, делает обложки и подсказывает, что ответить клиенту в директе. Тебе остаётся снимать и общаться.</p>
-      <a class="btn" href="https://t.me/asya_forwomen_bot?start=advent">Забрать за 3 900 ₽</a>
+      <a class="btn tobuy" href="#buy">Забрать за 3 900 ₽</a>
       <p class="live" aria-live="off"><i aria-hidden="true"></i><span>3 900 ₽ ещё <b class="tt">–</b>, потом 4 900 ₽</span></p>
       <p class="note">Работает в Claude или Codex на платной подписке. Оплата и доступ — в Telegram. Скилл по монтажу ты получаешь сразу после оплаты.</p>
     </div>
@@ -437,7 +440,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
         <p class="eyebrow">Окошко 1 · сразу после оплаты</p>
         <h2>Монтаж рилс, который делает ИИ</h2>
         <p class="intro">Сначала ролик, как он снят на телефон. Потом тот же ролик после монтажа: ИИ вырезал паузы, поставил субтитры, картинки и зумы.</p>
-        <a class="btn" href="https://t.me/asya_forwomen_bot?start=advent">Хочу такой монтаж</a>
+        <a class="btn tobuy" href="#buy">Хочу такой монтаж</a>
       </div>
     </div>
   </section>
@@ -509,14 +512,14 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
       <div class="moon" data-d="-.12"><canvas class="mc" width="320" height="320"></canvas></div>
       <canvas id="moonsky"></canvas>
     </div>
-    <div class="price">
+    <div class="price" id="buy">
       <h2>Вся команда — за одну оплату</h2>
       <p class="cmp">Монтажёру платишь за каждый ролик. Адвент оплачиваешь один раз, и все 12 скиллов остаются у тебя.</p>
       <p class="big">3 900 ₽</p>
       <p class="later">с 1 декабря — 4 900 ₽</p>
       <div class="couture" aria-live="polite"><span><b id="d">–</b>дней</span><span class="dot">·</span><span><b id="h">–</b>ч</span><span class="dot">·</span><span><b id="m">–</b>мин</span><span class="dot">·</span><span><b id="s">–</b>сек</span></div>
       <p class="cap">до 30 ноября, 23:59 по Москве</p>
-      <a class="btn" href="https://t.me/asya_forwomen_bot?start=advent">Забрать адвент в Telegram</a>
+      <a class="btn" id="buybtn" href="https://t.me/asya_forwomen_bot?start=advent">Забрать адвент в Telegram</a>
       <p class="note">Оплата и доступ в Telegram-боте. Скилл по монтажу ты получаешь сразу после оплаты, остальные окошки — по календарю в декабре.</p>
     </div>
     <div class="treebox" aria-hidden="true"><canvas class="tree" id="tree"></canvas></div>
@@ -524,7 +527,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
 </main>
 
 <footer class="wrap">
-  <p class="docs">Оферта и оплата — в Telegram-боте <a href="https://t.me/asya_forwomen_bot?start=advent">@asya_forwomen_bot</a></p>
+  <p class="docs">Оферта и оплата — в Telegram-боте @asya_forwomen_bot</p>
   <div>Asya Secret · Секретный адвент</div>
 </footer>
 
@@ -539,7 +542,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
     <h3 id="dtitle"></h3>
     <p id="ddesc"></p>
     <div class="when" id="dwhen"></div>
-    <div class="acts"><a class="btn" href="https://t.me/asya_forwomen_bot?start=advent">Забрать все 12 · 3 900 ₽</a></div>
+    <div class="acts"><a class="btn tobuy" href="#buy">Забрать все 12 · 3 900 ₽</a></div>
   </div>
 </div>
 
@@ -553,12 +556,12 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
   <p class="small">Скидка 3 900 ₽ — ровно цена адвента. Пойдёшь на сессию, и адвент окупится полностью.</p>
   <div class="code"><b id="scode">КОЗОЧКА</b><button type="button" id="scopy">Скопировать</button></div>
   <p class="small">Сделай скрин этой карточки и пришли его Асе в Telegram <a href="https://t.me/andalusia_espana">@andalusia_espana</a>, она закрепит за тобой скидку. Для тех, кто купил адвент, действует до 6 февраля.</p>
-  <a class="btn" href="https://t.me/asya_forwomen_bot?start=advent">Забрать адвент</a>
+  <a class="btn tobuy" href="#buy">Забрать адвент</a>
   <a class="btn line shot" href="https://t.me/andalusia_espana">Отправить скрин Асе</a>
 </div>
 <canvas id="sky" aria-hidden="true"></canvas>
 
-<div class="sticky" id="sticky"><span><span class="p">3 900 ₽</span><small>ещё <b class="tt">–</b></small></span><a class="btn" href="https://t.me/asya_forwomen_bot?start=advent">Забрать адвент</a></div>
+<div class="sticky" id="sticky"><span><span class="p">3 900 ₽</span><small>ещё <b class="tt">–</b></small></span><a class="btn tobuy" href="#buy">Забрать адвент</a></div>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="gk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8A6A2E"/><stop offset=".45" stop-color="#F3E1AE"/><stop offset="1" stop-color="#A8823F"/></linearGradient>
 <symbol id="key" viewBox="0 0 40 16"><circle cx="7" cy="8" r="5" fill="none" stroke="url(#gk)" stroke-width="2.2"/><path d="M12 8h24M29 8v4M33 8v3" stroke="url(#gk)" stroke-width="2.2" fill="none" stroke-linecap="round"/></symbol></defs></svg>
@@ -865,6 +868,14 @@ var OPEN=[0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21];
   Array.prototype.forEach.call(document.querySelectorAll('a[href*="asya_forwomen_bot"]'),function(el){
     el.addEventListener('click',function(e){ if(reduce||e.metaKey||e.ctrlKey||e.shiftKey||e.button!==0) return; e.preventDefault(); var href=el.href;
       window.__confetti(e.clientX||SW/2,e.clientY||SH/2,70); setTimeout(function(){ window.location.href=href; },620); }); });
+  // every other call to action leads down to that one purchase button; only it opens the bot
+  var buyBtn=document.getElementById('buybtn');
+  Array.prototype.forEach.call(document.querySelectorAll('a.tobuy'),function(el){
+    el.addEventListener('click',function(e){ if(e.metaKey||e.ctrlKey||e.shiftKey||e.button!==0) return; e.preventDefault();
+      hideDrawer(); hideSecret();
+      buyBtn.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});
+      buyBtn.classList.remove('call'); void buyBtn.offsetWidth;
+      setTimeout(function(){ buyBtn.classList.add('call'); buyBtn.focus({preventScroll:true}); }, reduce?0:1100); }); });
 
   // night scene: twinkling stars, a slowly turning moon, the sleigh crossing it, ribbons on first arrival
   (function(){ var night=document.getElementById('night'), st=document.getElementById('stars'), sx=st.getContext('2d'), ms=document.getElementById('moonsky'), mx=ms.getContext('2d'), mbox=ms.parentNode, d=Math.min(2,window.devicePixelRatio||1), S=[], vis=false, rained=false, runAt=0, fl=null, w=0, h=0, mw=0, mh=0;
@@ -956,7 +967,9 @@ var OPEN=[0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21];
   upd(); setInterval(upd,1000);
 
   var st=document.getElementById('sticky'), hero=document.querySelector('.hero');
-  if('IntersectionObserver' in window){ new IntersectionObserver(function(es){ es.forEach(function(e){ st.classList.toggle('show',!e.isIntersecting); }); },{threshold:0}).observe(hero); }
+  if('IntersectionObserver' in window){ var heroIn=true, buyIn=false, buyEl=document.getElementById('buy');
+    new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.target===hero) heroIn=e.isIntersecting; else buyIn=e.isIntersecting; }); st.classList.toggle('show',!heroIn&&!buyIn); },{threshold:0}).observe(hero);
+    new IntersectionObserver(function(es){ es.forEach(function(e){ buyIn=e.isIntersecting; }); st.classList.toggle('show',!heroIn&&!buyIn); },{threshold:0}).observe(buyEl); }
 })();
 </script>
 <script>/* «Целый мир»: a gold satin ribbon unrolls from the gift box as you scroll, weaving behind the
@@ -1128,7 +1141,7 @@ var OPEN=[0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21];
   window.__treeGo=function(){ if(!start&&pg<1) start=performance.now(); kick(); };
   function kick(){ if(!raf&&vis) raf=requestAnimationFrame(f); }
   function f(t){ raf=0; if(!vis) return; x.clearRect(0,0,w,h);
-    if(start&&pg<1){ var p=Math.min(1,(t-start)/3400); pg=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2; if(pg>=1&&!starT){ starT=t; window.__treeIsDone=true; if(window.__sleighGo) window.__sleighGo(); } }
+    if(start&&pg<1){ var p=Math.min(1,(t-start)/1900); pg=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2; if(pg>=1&&!starT){ starT=t; window.__treeIsDone=true; if(window.__sleighGo) window.__sleighGo(); } }
     if(reduce&&!starT){ starT=t; window.__treeIsDone=true; }
     var dtt=lt?Math.min(.05,(t-lt)/1000):0; lt=t; var spd=reduce?0:(!starT?.5:Math.max(0,.5*(1-(t-starT)/2600))); rot+=spd*dtt;
     x.globalCompositeOperation='lighter';
@@ -1151,14 +1164,16 @@ var OPEN=[0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21];
     // racing spark while it winds up
     if(pg>0&&pg<1){ var H=geo(pg,rot), hg=x.createRadialGradient(H[0],H[1],0,H[0],H[1],14); hg.addColorStop(0,'rgba(255,250,230,1)'); hg.addColorStop(1,'rgba(255,200,120,0)'); x.fillStyle=hg; x.beginPath(); x.arc(H[0],H[1],14,0,6.283); x.fill(); }
     // star on top
-    if(starT){ var e=Math.min(1,(t-starT)/700), sc=(1-Math.pow(1-e,3))*(1+.08*Math.sin(t/420)), sx=w/2, sy=h*.17, R=Math.min(w*.07,13)*sc;
+    if(starT){ var e=Math.min(1,(t-starT)/700), sc=((1-Math.pow(1-e,3))+.5*Math.sin(Math.PI*e))*(1+.08*Math.sin(t/420)), sx=w/2, sy=h*.17, R=Math.min(w*.07,13)*sc;
       var sg=x.createRadialGradient(sx,sy,0,sx,sy,R*3); sg.addColorStop(0,'rgba(255,236,190,.7)'); sg.addColorStop(1,'rgba(255,200,120,0)'); x.fillStyle=sg; x.beginPath(); x.arc(sx,sy,R*3,0,6.283); x.fill();
+      var fe=Math.min(1,(t-starT)/900); if(fe<1){ x.strokeStyle='rgba(255,236,190,'+(.8*(1-fe))+')'; x.lineWidth=1.5; x.beginPath(); x.arc(sx,sy,R*(1.2+5*fe),0,6.283); x.stroke();
+        for(var q2=0;q2<8;q2++){ var an2=q2*Math.PI/4; x.beginPath(); x.moveTo(sx+Math.cos(an2)*R*1.3,sy+Math.sin(an2)*R*1.3); x.lineTo(sx+Math.cos(an2)*R*(1.3+4.5*fe),sy+Math.sin(an2)*R*(1.3+4.5*fe)); x.stroke(); } }
       x.save(); x.translate(sx,sy); x.rotate(Math.sin(t/1600)*.15); x.fillStyle='rgba(255,240,200,.95)'; x.beginPath();
       for(var k=0;k<10;k++){ var an=-Math.PI/2+k*Math.PI/5, rr=k%2?R*.42:R; x.lineTo(Math.cos(an)*rr,Math.sin(an)*rr); } x.closePath(); x.fill(); x.restore(); }
     x.globalCompositeOperation='source-over';
     if(!reduce) kick(); }
   size(); addEventListener('resize',function(){ size(); kick(); });
-  if('IntersectionObserver' in window){ new IntersectionObserver(function(es){ vis=es[0].isIntersecting; if(vis){ kick(); if(!start&&pg<1) setTimeout(function(){ if(vis&&!start) window.__treeGo(); },2600); } },{threshold:.2}).observe(c); }
+  if('IntersectionObserver' in window){ new IntersectionObserver(function(es){ var e=es[0]; vis=e.isIntersecting; if(vis){ kick(); if(!start&&pg<1&&e.intersectionRatio>=.5) setTimeout(function(){ if(vis&&!start) window.__treeGo(); },250); } },{threshold:[0,.5]}).observe(c); }
   else { vis=true; pg=1; kick(); }
 })();
 
