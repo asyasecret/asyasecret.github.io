@@ -275,6 +275,16 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
 }
 @media (max-width:560px){
   .proof{grid-template-columns:1fr}
+  .couture{display:grid;grid-template-columns:repeat(4,1fr);gap:0;width:100%;padding:12px 0;font-style:normal;font-family:var(--body);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+  .couture span:not(.dot){display:flex;flex-direction:column;align-items:center}
+  .couture b{font-family:var(--display);font-size:32px;margin:0 0 4px;letter-spacing:0}
+  .couture .dot{display:none}
+}
+@media (max-width:380px){
+  .mark{font-size:15px;letter-spacing:.18em}
+  .tline b{font-size:13px}
+  .snd{width:40px;height:40px;margin-left:6px}
+  .live{white-space:normal;font-size:12px}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before{animation:none!important;transition:none!important}
@@ -381,7 +391,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
         <p class="intro">Эти скиллы я собрала для своего блога: с ними монтирую рилс и пишу тексты. В адвент положила то, чем пользуюсь сама.</p>
         <div class="proof">
           <figure><img src="assets/proof_profile.webp" alt="Профиль asya.secret в Instagram: 135 тысяч подписчиков" width="1040" height="357" loading="lazy"><figcaption>Мой Instagram</figcaption></figure>
-          <figure><img src="assets/proof_stats.webp" alt="Статистика за месяц: 23,1 млн просмотров, 93,2 тысячи новых подписчиков" width="1040" height="734" loading="lazy"><figcaption>Статистика за месяц: 23,1 млн просмотров</figcaption></figure>
+          <figure><img src="assets/proof_stats.webp" alt="Статистика второго блога за месяц: 23,1 млн просмотров, 93,2 тысячи новых подписчиков" width="1040" height="734" loading="lazy"><figcaption>Мой второй блог: 23 млн просмотров за месяц</figcaption></figure>
         </div>
       </div>
     </div>
