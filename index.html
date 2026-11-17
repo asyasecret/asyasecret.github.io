@@ -152,6 +152,17 @@ h2{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(
 .role .ins{margin-top:10px;font-size:14px;font-style:italic;font-family:var(--display);color:var(--wine)}
 .honest{margin:26px 0 0;font-family:var(--display);font-style:italic;font-size:20px;color:var(--wine)}
 
+.me{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.me-pics{position:relative;padding:12px 16% 12% 12px}
+.me-pics figure{margin:0}
+.me-pics img{width:100%;height:100%;object-fit:cover;display:block}
+.me-pics .main{aspect-ratio:4/5;border-radius:240px 240px 18px 18px;overflow:hidden;outline:1px solid rgba(196,160,100,.75);outline-offset:9px;box-shadow:0 34px 60px -34px rgba(78,12,24,.6)}
+.me-pics .s1,.me-pics .s2{position:absolute;aspect-ratio:4/5;border-radius:14px;overflow:hidden;border:5px solid #FBF5EE;box-shadow:0 22px 40px -20px rgba(78,12,24,.6)}
+.me-pics .s1{right:0;bottom:0;width:40%}
+.me-pics .s2{right:2%;top:16%;width:28%}
+.stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:26px;margin:4px 0 22px;padding:16px 0;border-top:1px solid rgba(196,160,100,.6);border-bottom:1px solid rgba(196,160,100,.6)}
+.stats b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.1;color:var(--wine);font-variant-numeric:lining-nums}
+.stats span{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#7a525a;margin-top:4px}
 .calwrap{display:grid;grid-template-columns:1fr minmax(300px,420px);gap:56px;align-items:center}
 .cal{background:#FBF5EE;border:1px solid rgba(196,160,100,.6);outline:1px solid rgba(196,160,100,.3);outline-offset:-8px;border-radius:18px;padding:24px 22px 20px}
 .cal .mon{font-family:var(--display);font-style:italic;font-size:26px;text-align:center;margin-bottom:12px}
@@ -249,6 +260,9 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
   .team{grid-template-columns:1fr}
   .split{grid-template-columns:1fr}
   .calwrap{grid-template-columns:1fr;gap:24px}
+  .me{grid-template-columns:1fr;gap:28px}
+  .me-pics{max-width:440px;margin:0 auto}
+  .stats{gap:16px}
   .faq summary{font-size:19px}
   .sticky{display:flex}
   .tline .lbl{display:none}
@@ -340,6 +354,22 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
         <h2>Монтаж рилс, который делает ИИ</h2>
         <p class="intro">Сначала ролик, как он снят на телефон. Потом тот же ролик после монтажа: ИИ вырезал паузы, поставил субтитры, картинки и зумы.</p>
         <a class="btn" href="https://t.me/asya_forwomen_bot?start=advent">Хочу такой монтаж</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="me">
+    <div class="me">
+      <div class="me-pics">
+        <figure class="main"><img src="assets/me.webp" alt="Ася, автор Секретного адвента" width="900" height="1125" loading="lazy"></figure>
+        <figure class="s1"><img src="assets/me_dubai.webp" alt="" width="700" height="875" loading="lazy"></figure>
+        <figure class="s2"><img src="assets/me_phone.webp" alt="" width="700" height="875" loading="lazy"></figure>
+      </div>
+      <div>
+        <p class="eyebrow">Кто собрал адвент</p>
+        <h2>Привет, я Ася</h2>
+        <div class="stats"><div><b>135 тыс.</b><span>подписчиков в Instagram</span></div><div><b>12 млн</b><span>мои запуски</span></div><div><b>12+ лет</b><span>живу в Испании</span></div></div>
+        <p class="intro">Эти скиллы я собрала для своего блога: с ними монтирую рилс и пишу тексты. В адвент положила то, чем пользуюсь сама.</p>
       </div>
     </div>
   </section>
