@@ -49,6 +49,14 @@ h1{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(
 .btn.line{background:transparent;color:var(--ink);border:1px solid var(--ink);box-shadow:none}
 a:focus-visible,button:focus-visible{outline:2px solid var(--champagne);outline-offset:3px}
 .note{font-size:13px;color:#7a525a;margin:12px 0 0}
+.soon{margin:22px 0 0}
+.soon-l{margin:0 0 8px;font-size:10.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#8a5a62}
+.soon-t{display:inline-flex;align-items:baseline;gap:18px;margin:0;padding:9px 2px 8px;border-top:1px solid rgba(196,160,100,.7);border-bottom:1px solid rgba(196,160,100,.7)}
+.soon-t span{display:inline-flex;align-items:baseline;gap:4px}
+.soon-t b{font-family:var(--display);font-weight:400;font-size:27px;line-height:1;color:var(--ink);font-variant-numeric:lining-nums tabular-nums}
+.soon-t i{font-family:var(--display);font-style:italic;font-size:15px;color:#a8834a}
+.soon-t .cd-s.tick{animation:tick .6s ease-out}
+@media (max-width:400px){.soon-t{gap:13px}.soon-t b{font-size:24px}}
 .live{display:inline-flex;align-items:center;gap:9px;margin:14px 0 0;padding:7px 14px 7px 12px;border:1px solid rgba(196,160,100,.7);border-radius:999px;background:rgba(251,245,238,.85);font-size:13px;color:var(--wine);white-space:nowrap}
 .live b{font-family:var(--display);font-weight:500;font-size:16px;font-variant-numeric:lining-nums tabular-nums;color:var(--ink)}
 .live i{position:relative;width:8px;height:8px;border-radius:50%;background:#B3263A;flex:none}
@@ -159,6 +167,11 @@ h2{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(
 .chips{font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--champagne);white-space:nowrap}
 .role p{margin:8px 0 0;color:#5a3138}
 .role .ins{margin-top:10px;font-size:14px;font-style:italic;font-family:var(--display);color:var(--wine)}
+.role.chief{background:linear-gradient(160deg,#6d1426,#4E0C18 70%);border-color:rgba(196,160,100,.6);color:#f3e2d6;display:flex;flex-direction:column;justify-content:center}
+.role.chief h3{color:var(--champagne-lt);font-style:italic}
+.role.chief .chips{color:var(--champagne)}
+.role.chief p{color:#ecd2c9;font-family:var(--display);font-style:italic;font-size:18px;line-height:1.45}
+h1,h2,h3,.eyebrow,.intro,.lead{text-wrap:balance}
 .honest{margin:26px 0 0;font-family:var(--display);font-style:italic;font-size:20px;color:var(--wine)}
 
 .me{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
@@ -367,7 +380,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
 <button class="goat" id="goat" type="button" aria-label="Секрет: золотая козочка" hidden><i></i><img src="assets/goat.webp" alt="" width="240" height="222"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 0Q10 10 20 10Q10 10 10 20Q10 10 0 10Q10 10 10 0Z" fill="#FFF6D6"/></svg></button>
 <header>
   <span class="mark">ASYA SECRET</span>
-  <span class="hdr-r"><span class="tline"><span class="lbl">3 900 ₽ · ещё </span><b class="tt">–</b></span>
+  <span class="hdr-r"><span class="tline"><span class="lbl">3 900 ₽ · ещё </span><b class="tt">–</b></span>
   <button class="snd" id="snd" type="button" aria-pressed="false" aria-label="Звук музыкальной шкатулки"><svg class="off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><svg class="on" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></span>
 </header>
 
@@ -378,15 +391,15 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
         <div class="inner">
           <img src="assets/cover.webp" alt="Адвент-календарь Asya Secret: коробка с двенадцатью окошками" width="1122" height="1402">
           <button class="win" type="button" data-i="0" style="left:6.417%;top:29.244%;width:21.836%;height:19.544%" aria-label="Окошко 1: Монтаж рилс"><span class="drw" style="background-size:457.96% 511.68%;background-position:8.210% 36.348%"><svg class="pull" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span><span class="cast"></span><span class="lit"></span><span class="flap"><span class="f"></span><span class="b"></span><span class="e"></span><em class="n">1</em><svg class="k" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span></button>
-<button class="win" type="button" data-i="1" style="left:28.788%;top:32.240%;width:18.271%;height:16.548%" aria-label="Окошко 2: Рилс из исследования"><span class="drw" style="background-size:547.32% 604.31%;background-position:35.224% 38.632%"><svg class="pull" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span><span class="cast"></span><span class="lit"></span><span class="flap"><span class="f"></span><span class="b"></span><span class="e"></span><em class="n">2</em><svg class="k" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span></button>
+<button class="win" type="button" data-i="1" style="left:28.788%;top:32.240%;width:18.271%;height:16.548%" aria-label="Окошко 2: Рилс из исследования"><span class="drw" style="background-size:547.32% 604.31%;background-position:35.224% 38.632%"><svg class="pull" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span><span class="cast"></span><span class="lit"></span><span class="flap"><span class="f"></span><span class="b"></span><span class="e"></span><em class="n">2</em><svg class="k" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span></button>
 <button class="win" type="button" data-i="2" style="left:6.417%;top:49.215%;width:21.836%;height:18.545%" aria-label="Окошко 3: Генератор хуков"><span class="drw" style="background-size:457.96% 539.23%;background-position:8.210% 60.420%"><svg class="pull" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span><span class="cast"></span><span class="lit"></span><span class="flap"><span class="f"></span><span class="b"></span><span class="e"></span><em class="n">3</em><svg class="k" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span></button>
 <button class="win" type="button" data-i="3" style="left:28.788%;top:49.215%;width:18.271%;height:18.545%" aria-label="Окошко 4: Твой голос"><span class="drw" style="background-size:547.32% 539.23%;background-position:35.224% 60.420%"><svg class="pull" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span><span class="cast"></span><span class="lit"></span><span class="flap"><span class="f"></span><span class="b"></span><span class="e"></span><em class="n">4</em><svg class="k" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span></button>
 <button class="win" type="button" data-i="4" style="left:6.417%;top:68.188%;width:21.836%;height:18.616%" aria-label="Окошко 5: Живой текст"><span class="drw" style="background-size:457.96% 537.16%;background-position:8.210% 83.786%"><svg class="pull" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span><span class="cast"></span><span class="lit"></span><span class="flap"><span class="f"></span><span class="b"></span><span class="e"></span><em class="n">5</em><svg class="k" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span></button>
-<button class="win" type="button" data-i="5" style="left:28.788%;top:68.188%;width:18.271%;height:18.616%" aria-label="Окошко 6: Обложки и карусели"><span class="drw" style="background-size:547.32% 537.16%;background-position:35.224% 83.786%"><svg class="pull" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span><span class="cast"></span><span class="lit"></span><span class="flap"><span class="f"></span><span class="b"></span><span class="e"></span><em class="n">6</em><svg class="k" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span></button>
+<button class="win" type="button" data-i="5" style="left:28.788%;top:68.188%;width:18.271%;height:18.616%" aria-label="Окошко 6: Обложки и карусели"><span class="drw" style="background-size:547.32% 537.16%;background-position:35.224% 83.786%"><svg class="pull" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span><span class="cast"></span><span class="lit"></span><span class="flap"><span class="f"></span><span class="b"></span><span class="e"></span><em class="n">6</em><svg class="k" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span></button>
 <button class="win" type="button" data-i="6" style="left:54.367%;top:32.240%;width:17.647%;height:16.548%" aria-label="Окошко 7: Шапка профиля"><span class="drw" style="background-size:566.67% 604.31%;background-position:66.017% 38.632%"><svg class="pull" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span><span class="cast"></span><span class="lit"></span><span class="flap"><span class="f"></span><span class="b"></span><span class="e"></span><em class="n">7</em><svg class="k" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span></button>
-<button class="win" type="button" data-i="7" style="left:72.549%;top:29.244%;width:21.034%;height:19.544%" aria-label="Окошко 8: Контент-план на месяц"><span class="drw" style="background-size:475.42% 511.68%;background-position:91.874% 36.348%"><svg class="pull" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span><span class="cast"></span><span class="lit"></span><span class="flap"><span class="f"></span><span class="b"></span><span class="e"></span><em class="n">8</em><svg class="k" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span></button>
+<button class="win" type="button" data-i="7" style="left:72.549%;top:29.244%;width:21.034%;height:19.544%" aria-label="Окошко 8: Контент-план на месяц"><span class="drw" style="background-size:475.42% 511.68%;background-position:91.874% 36.348%"><svg class="pull" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span><span class="cast"></span><span class="lit"></span><span class="flap"><span class="f"></span><span class="b"></span><span class="e"></span><em class="n">8</em><svg class="k" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span></button>
 <button class="win" type="button" data-i="8" style="left:54.367%;top:49.215%;width:17.647%;height:18.545%" aria-label="Окошко 9: Продающий пост"><span class="drw" style="background-size:566.67% 539.23%;background-position:66.017% 60.420%"><svg class="pull" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span><span class="cast"></span><span class="lit"></span><span class="flap"><span class="f"></span><span class="b"></span><span class="e"></span><em class="n">9</em><svg class="k" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span></button>
-<button class="win" type="button" data-i="9" style="left:72.549%;top:49.215%;width:21.034%;height:18.545%" aria-label="Окошко 10: Продажи в директе"><span class="drw" style="background-size:475.42% 539.23%;background-position:91.874% 60.420%"><svg class="pull" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span><span class="cast"></span><span class="lit"></span><span class="flap"><span class="f"></span><span class="b"></span><span class="e"></span><em class="n">10</em><svg class="k" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span></button>
+<button class="win" type="button" data-i="9" style="left:72.549%;top:49.215%;width:21.034%;height:18.545%" aria-label="Окошко 10: Продажи в директе"><span class="drw" style="background-size:475.42% 539.23%;background-position:91.874% 60.420%"><svg class="pull" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span><span class="cast"></span><span class="lit"></span><span class="flap"><span class="f"></span><span class="b"></span><span class="e"></span><em class="n">10</em><svg class="k" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span></button>
 <button class="win" type="button" data-i="10" style="left:54.367%;top:68.188%;width:17.647%;height:18.616%" aria-label="Окошко 11: Тренды под нишу"><span class="drw" style="background-size:566.67% 537.16%;background-position:66.017% 83.786%"><svg class="pull" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span><span class="cast"></span><span class="lit"></span><span class="flap"><span class="f"></span><span class="b"></span><span class="e"></span><em class="n">11</em><svg class="k" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span></button>
 <button class="win" type="button" data-i="11" style="left:72.549%;top:68.188%;width:21.034%;height:18.616%" aria-label="Окошко 12: Моушен"><span class="drw" style="background-size:475.42% 537.16%;background-position:91.874% 83.786%"><svg class="pull" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span><span class="cast"></span><span class="lit"></span><span class="flap"><span class="f"></span><span class="b"></span><span class="e"></span><em class="n">12</em><svg class="k" viewBox="0 0 40 16" aria-hidden="true"><use href="#key"/></svg></span></button>
         </div>
@@ -401,35 +414,35 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
         </button>
       </div>
       <div class="under" id="under">
-        <span class="hint" id="hint"><svg width="14" height="16" viewBox="0 0 24 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 13V4a2 2 0 0 1 4 0v8"/><path d="M13 11a2 2 0 0 1 4 0v2"/><path d="M17 12a2 2 0 0 1 4 0v5a8 8 0 0 1-8 8h-1a8 8 0 0 1-6.5-3.4L2 17a2 2 0 0 1 3-2.6l4 3.6"/></svg><span id="hinttext">нажми на печать</span></span>
-        <div class="prog" id="prog"><span class="hint" style="justify-content:center"><span id="cnt">открыто 0 из 12</span></span><div class="bar"><i id="bar"></i></div></div>
-        <p class="allopen" id="allopen">Все 12 окошек открыты. Коробка твоя.</p>
+        <span class="hint" id="hint"><svg width="14" height="16" viewBox="0 0 24 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 13V4a2 2 0 0 1 4 0v8"/><path d="M13 11a2 2 0 0 1 4 0v2"/><path d="M17 12a2 2 0 0 1 4 0v5a8 8 0 0 1-8 8h-1a8 8 0 0 1-6.5-3.4L2 17a2 2 0 0 1 3-2.6l4 3.6"/></svg><span id="hinttext">нажми на печать</span></span>
+        <div class="prog" id="prog"><span class="hint" style="justify-content:center"><span id="cnt">открыто 0 из 12</span></span><div class="bar"><i id="bar"></i></div></div>
+        <p class="allopen" id="allopen">Все 12 окошек открыты. Коробка твоя.</p>
         <button class="reseal" id="reseal" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Запечатать снова</button>
       </div>
     </div>
     <div>
-      <p class="eyebrow">Новогодний адвент для экспертов и блогеров</p>
-      <h1>Секретный адвент, который превращает твой ИИ в команду из 7 помощников</h1>
-      <p class="lead">12 окошек — 12 готовых скиллов для твоего ИИ. Он монтирует твои рилс, пишет сценарии и посты твоим голосом, делает обложки и подсказывает, что ответить клиенту в директе. Тебе остаётся снимать и общаться.</p>
-      <a class="btn tobuy" href="#buy">Забрать за 3 900 ₽</a>
-      <p class="live" aria-live="off"><i aria-hidden="true"></i><span>3 900 ₽ ещё <b class="tt">–</b>, потом 4 900 ₽</span></p>
-      <p class="note">Работает в Claude или Codex на платной подписке. Оплата и доступ — в Telegram. Скилл по монтажу ты получаешь сразу после оплаты.</p>
+      <p class="eyebrow">Новогодний адвент для экспертов и блогеров</p>
+      <h1>Секретный адвент, который превращает твой ИИ в команду из 7 помощников</h1>
+      <p class="lead">12 окошек — 12 готовых скиллов для твоего ИИ. Он монтирует твои рилс, пишет сценарии и посты твоим голосом, делает обложки и подсказывает, что ответить клиенту в директе. Тебе остаётся снимать и общаться.</p>
+      <a class="btn tobuy" href="#buy">Забрать за 3 900 ₽</a>
+      <div class="soon"><p class="soon-l">цена вырастет до 4 900 ₽ через</p><p class="soon-t" aria-live="off"><span><b class="cd-d">–</b><i>дн</i></span><span><b class="cd-h">–</b><i>ч</i></span><span><b class="cd-m">–</b><i>мин</i></span><span><b class="cd-s">–</b><i>сек</i></span></p></div>
+      <p class="note">Работает в Claude или Codex на платной подписке. Оплата и доступ — в Telegram. Скилл по монтажу ты получаешь сразу после оплаты.</p>
     </div>
   </div>
 
   <section id="team">
-    <h2>Твоя команда из 7 помощников</h2>
-    <p class="intro">Двенадцать окошек — это семь ролей, за которые эксперты и блогеры обычно платят людям или отдают свои вечера.</p>
+    <h2>Твоя команда из 7 помощников</h2>
+    <p class="intro">Двенадцать окошек — это семь ролей, за которые эксперты и блогеры обычно платят людям или отдают свои вечера.</p>
     <ol class="team">
-      <li class="role"><div class="top"><h3>Монтажёр</h3><span class="chips">окошко 1</span></div><p>Вырезает паузы и оговорки, ставит субтитры, зумы, картинки и звук. Ты снимаешь — получаешь готовый ролик.</p><p class="ins">Вместо вечеров в CapCut или монтажёра, которому платишь за каждый ролик.</p></li>
-      <li class="role"><div class="top"><h3>Сценарист</h3><span class="chips">окошки 2 и 3</span></div><p>Придумывает хуки — первые секунды, на которых человек решает, смотреть или листать. Пишет сценарии рилс на основе реальных исследований: факт, история, вывод.</p><p class="ins">Вместо «о чём снимать сегодня» в одиннадцать вечера.</p></li>
-      <li class="role"><div class="top"><h3>Копирайтер и редактор</h3><span class="chips">окошки 4, 5, 9</span></div><p>Сначала собирает профиль твоего голоса по твоим же текстам. Потом пишет продающие посты твоими словами и убирает нейросетевой тон из любого текста.</p><p class="ins">Вместо текстов, которые звучат как робот.</p></li>
-      <li class="role"><div class="top"><h3>Дизайнер</h3><span class="chips">окошко 6</span></div><p>Делает обложки рилс и слайды каруселей с аккуратной кириллицей.</p><p class="ins">Вместо часов в Canva.</p></li>
-      <li class="role"><div class="top"><h3>SMM-менеджер</h3><span class="chips">окошки 7, 8, 11</span></div><p>Пересобирает шапку профиля, чтобы было понятно, зачем подписываться. Составляет контент-план на месяц таблицей. Находит свежие тренды и поводы под твою нишу, с датами и источниками.</p><p class="ins">Вместо ведения блога наугад.</p></li>
-      <li class="role"><div class="top"><h3>Менеджер по продажам</h3><span class="chips">окошко 10</span></div><p>Подсказывает, что ответить в директе, чтобы понять задачу человека и предложить одно решение без давления.</p><p class="ins">Вместо «я подумаю» и пропавших клиентов.</p></li>
-      <li class="role"><div class="top"><h3>Моушен-дизайнер</h3><span class="chips">окошко 12</span></div><p>Оживляет стикеры и надписи: GIF, MP4 и видеостикеры для Telegram.</p><p class="ins">Вместо заказа у дизайнера на каждую мелочь.</p></li>
+      <li class="role"><div class="top"><h3>Монтажёр</h3><span class="chips">окошко 1</span></div><p>Вырезает паузы и оговорки, ставит субтитры, зумы, картинки и звук. Ты снимаешь — получаешь готовый ролик.</p><p class="ins">Вместо вечеров в CapCut или монтажёра, которому платишь за каждый ролик.</p></li>
+      <li class="role"><div class="top"><h3>Сценарист</h3><span class="chips">окошки 2 и 3</span></div><p>Придумывает хуки — первые секунды, на которых человек решает, смотреть или листать. Пишет сценарии рилс на основе реальных исследований: факт, история, вывод.</p><p class="ins">Вместо «о чём снимать сегодня» в одиннадцать вечера.</p></li>
+      <li class="role"><div class="top"><h3>Копирайтер и редактор</h3><span class="chips">окошки 4, 5, 9</span></div><p>Сначала собирает профиль твоего голоса по твоим же текстам. Потом пишет продающие посты твоими словами и убирает нейросетевой тон из любого текста.</p><p class="ins">Вместо текстов, которые звучат как робот.</p></li>
+      <li class="role"><div class="top"><h3>Дизайнер</h3><span class="chips">окошко 6</span></div><p>Делает обложки рилс и слайды каруселей с аккуратной кириллицей.</p><p class="ins">Вместо часов в Canva.</p></li>
+      <li class="role"><div class="top"><h3>SMM-менеджер</h3><span class="chips">окошки 7, 8, 11</span></div><p>Пересобирает шапку профиля, чтобы было понятно, зачем подписываться. Составляет контент-план на месяц таблицей. Находит свежие тренды и поводы под твою нишу, с датами и источниками.</p><p class="ins">Вместо ведения блога наугад.</p></li>
+      <li class="role"><div class="top"><h3>Менеджер по продажам</h3><span class="chips">окошко 10</span></div><p>Подсказывает, что ответить в директе, чтобы понять задачу человека и предложить одно решение без давления.</p><p class="ins">Вместо «я подумаю» и пропавших клиентов.</p></li>
+      <li class="role"><div class="top"><h3>Моушен-дизайнер</h3><span class="chips">окошко 12</span></div><p>Оживляет стикеры и надписи: GIF, MP4 и видеостикеры для Telegram.</p><p class="ins">Вместо заказа у дизайнера на каждую мелочь.</p></li>
+      <li class="role chief"><div class="top"><h3>Главный редактор</h3><span class="chips">это ты</span></div><p>ИИ делает черновую работу, последнее слово всегда за тобой.</p></li>
     </ol>
-    <p class="honest">ИИ делает черновую работу, последнее слово всегда за тобой.</p>
   </section>
 
   <section>
@@ -439,9 +452,9 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
         <button class="sound" id="sound" type="button" aria-pressed="false">Включить звук</button>
       </div>
       <div>
-        <p class="eyebrow">Окошко 1 · сразу после оплаты</p>
+        <p class="eyebrow">Окошко 1 · сразу после оплаты</p>
         <h2>Монтаж рилс, который делает ИИ</h2>
-        <p class="intro">Сначала ролик, как он снят на телефон. Потом тот же ролик после монтажа: ИИ вырезал паузы, поставил субтитры, картинки и зумы.</p>
+        <p class="intro">Сначала ролик, как он снят на телефон. Потом тот же ролик после монтажа: ИИ вырезал паузы, поставил субтитры, картинки и зумы.</p>
         <a class="btn tobuy" href="#buy">Хочу такой монтаж</a>
       </div>
     </div>
@@ -458,17 +471,17 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
           <i class="sp" style="left:86%;top:4%"></i><i class="sp" style="left:7%;top:12%;animation-delay:1.3s;transform:scale(.7)"></i><i class="sp" style="left:90%;top:44%;animation-delay:2.2s;transform:scale(.6)"></i>
         </div>
         <div class="pbody">
-          <div class="hi">Привет, я Ася</div>
-          <div class="stats" id="stats"><div><b data-n="135" data-tail=" тыс.">135 тыс.</b><span>подписчиков</span></div><div><b data-n="12" data-tail=" млн ₽">12 млн ₽</b><span>мои запуски</span></div><div><b data-n="12" data-tail="+ лет">12+ лет</b><span>в Испании</span></div></div>
+          <div class="hi">Привет, я Ася</div>
+          <div class="stats" id="stats"><div><b data-n="135" data-tail=" тыс.">135 тыс.</b><span>подписчиков</span></div><div><b data-n="12" data-tail=" млн ₽">12 млн ₽</b><span>мои запуски</span></div><div><b data-n="12" data-tail="+ лет">12+ лет</b><span>в Испании</span></div></div>
         </div>
       </div>
       <div class="rv">
         <p class="eyebrow">Кто собрал адвент</p>
-        <h2>Эти скиллы я собрала для себя</h2>
-        <p class="intro">С ними я монтирую рилс и пишу тексты. В адвент положила то, чем пользуюсь сама.</p>
+        <h2>Эти скиллы я собрала для себя</h2>
+        <p class="intro">С ними я монтирую рилс и пишу тексты. В адвент положила то, чем пользуюсь сама.</p>
         <div class="proof">
           <figure><img src="assets/proof_profile.webp" alt="Профиль asya.secret в Instagram: 135 тысяч подписчиков" width="1040" height="357" loading="lazy"><figcaption>Мой Instagram</figcaption></figure>
-          <figure><img src="assets/proof_stats.webp" alt="Статистика второго блога за месяц: 23,1 млн просмотров, 93,2 тысячи новых подписчиков" width="1040" height="734" loading="lazy"><figcaption>Мой второй блог: 23 млн просмотров за месяц</figcaption></figure>
+          <figure><img src="assets/proof_stats.webp" alt="Статистика второго блога за месяц: 23,1 млн просмотров, 93,2 тысячи новых подписчиков" width="1040" height="734" loading="lazy"><figcaption>Мой второй блог: 23 млн просмотров за месяц</figcaption></figure>
         </div>
       </div>
     </div>
@@ -477,9 +490,9 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
   <section id="cal">
     <div class="calwrap">
       <div>
-        <p class="eyebrow">Когда что открывается</p>
+        <p class="eyebrow">Когда что открывается</p>
         <h2>Календарь окошек</h2>
-        <p class="intro">Скилл по монтажу ты получаешь сразу после оплаты. Остальные одиннадцать окошек открываются в декабре, по одному через день, в закрытом Telegram-канале. Нажми на дату и увидишь, что откроется в этот день.</p>
+        <p class="intro">Скилл по монтажу ты получаешь сразу после оплаты. Остальные одиннадцать окошек открываются в декабре, по одному через день, в закрытом Telegram-канале. Нажми на дату и увидишь, что откроется в этот день.</p>
       </div>
       <div class="calstage">
       <img class="deco tl" src="assets/deco_tl.webp" alt="" width="700" height="244" loading="lazy">
@@ -498,13 +511,13 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
   <section id="faq">
     <h2>Вопросы</h2>
     <div class="faq">
-      <details><summary>Для кого этот адвент?</summary><p>Для экспертов и блогеров, которые ведут блог сами и хотят отдать ИИ рутину: монтаж, тексты, обложки, контент-план. Ты снимаешь и общаешься с людьми, а черновую работу берёт на себя ИИ.</p></details>
-      <details><summary>Я и так пользуюсь ChatGPT. Чем это отличается?</summary><p>Обычный чат даёт советы и тексты, а скилл даёт ИИ готовые инструменты. Внутри мои правила, программы и шрифты. Например, скилл монтажа сам вырезает паузы, ставит субтитры красивыми шрифтами, добавляет зумы и картинки и отдаёт готовый ролик. Ничего не нужно объяснять заново: ИИ сразу работает как монтажёр, дизайнер или копирайтер.</p></details>
-      <details><summary>В каком ИИ это работает?</summary><p>В Claude или в Codex — он входит в платный ChatGPT. Нужна платная подписка на один из них.</p></details>
-      <details><summary>Я не дружу с техникой. Справлюсь?</summary><p>Да. Скилл загружается в Claude или Codex один раз, а дальше ты просто пишешь задачу обычными словами: «смонтируй этот ролик», «напиши пост моим голосом». К каждому скиллу есть видеоинструкция и пример результата, программировать ничего не нужно.</p></details>
-      <details><summary>Когда открываются окошки?</summary><p>Скилл по монтажу ты получаешь сразу после оплаты. Остальные одиннадцать окошек открываются по одному через день, с 1 по 21 декабря, в закрытом Telegram-канале. Все даты есть в календаре выше.</p></details>
-      <details><summary>Что, если я не успею разобраться в декабре?</summary><p>Ничего не сгорает. Скиллы ты скачиваешь себе, и они остаются у тебя: пользуйся, когда будет время.</p></details>
-      <details><summary>Как оплатить?</summary><p>Нажми любую кнопку «Забрать» на этой странице, и откроется Telegram-бот. Сразу после оплаты бот даст доступ к каналу, и ты получишь скилл по монтажу.</p></details>
+      <details><summary>Для кого этот адвент?</summary><p>Для экспертов и блогеров, которые ведут блог сами и хотят отдать ИИ рутину: монтаж, тексты, обложки, контент-план. Ты снимаешь и общаешься с людьми, а черновую работу берёт на себя ИИ.</p></details>
+      <details><summary>Я и так пользуюсь ChatGPT. Чем это отличается?</summary><p>Обычный чат даёт советы и тексты, а скилл даёт ИИ готовые инструменты. Внутри мои правила, программы и шрифты. Например, скилл монтажа сам вырезает паузы, ставит субтитры красивыми шрифтами, добавляет зумы и картинки и отдаёт готовый ролик. Ничего не нужно объяснять заново: ИИ сразу работает как монтажёр, дизайнер или копирайтер.</p></details>
+      <details><summary>В каком ИИ это работает?</summary><p>В Claude или в Codex — он входит в платный ChatGPT. Нужна платная подписка на один из них.</p></details>
+      <details><summary>Я не дружу с техникой. Справлюсь?</summary><p>Да. Скилл загружается в Claude или Codex один раз, а дальше ты просто пишешь задачу обычными словами: «смонтируй этот ролик», «напиши пост моим голосом». К каждому скиллу есть видеоинструкция и пример результата, программировать ничего не нужно.</p></details>
+      <details><summary>Когда открываются окошки?</summary><p>Скилл по монтажу ты получаешь сразу после оплаты. Остальные одиннадцать окошек открываются по одному через день, с 1 по 21 декабря, в закрытом Telegram-канале. Все даты есть в календаре выше.</p></details>
+      <details><summary>Что, если я не успею разобраться в декабре?</summary><p>Ничего не сгорает. Скиллы ты скачиваешь себе, и они остаются у тебя: пользуйся, когда будет время.</p></details>
+      <details><summary>Как оплатить?</summary><p>Внизу страницы нажми «Забрать адвент в Telegram», и откроется бот. Сразу после оплаты он даст доступ к каналу, и ты получишь скилл по монтажу.</p></details>
     </div>
   </section>
 
@@ -515,21 +528,21 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
       <canvas id="moonsky"></canvas>
     </div>
     <div class="price" id="buy">
-      <h2>Вся команда — за одну оплату</h2>
-      <p class="cmp">Монтажёру платишь за каждый ролик. Адвент оплачиваешь один раз, и все 12 скиллов остаются у тебя.</p>
-      <p class="big">3 900 ₽</p>
-      <p class="later">с 1 декабря — 4 900 ₽</p>
+      <h2>Вся команда — за одну оплату</h2>
+      <p class="cmp">Монтажёру платишь за каждый ролик. Адвент оплачиваешь один раз, и все 12 скиллов остаются у тебя.</p>
+      <p class="big">3 900 ₽</p>
+      <p class="later">с 1 декабря — 4 900 ₽</p>
       <div class="couture" aria-live="polite"><span><b id="d">–</b>дней</span><span class="dot">·</span><span><b id="h">–</b>ч</span><span class="dot">·</span><span><b id="m">–</b>мин</span><span class="dot">·</span><span><b id="s">–</b>сек</span></div>
-      <p class="cap">до 30 ноября, 23:59 по Москве</p>
-      <a class="btn" id="buybtn" href="https://t.me/asya_forwomen_bot?start=advent">Забрать адвент в Telegram</a>
-      <p class="note">Оплата и доступ в Telegram-боте. Скилл по монтажу ты получаешь сразу после оплаты, остальные окошки — по календарю в декабре. Условия — в <a href="https://telegra.ph/Usloviya-dostupa-k-AI-sovetniku-Asya-Secret-06-07" target="_blank" rel="noopener">публичной оферте</a>.</p>
+      <p class="cap">до 30 ноября, 23:59 по Москве</p>
+      <a class="btn" id="buybtn" href="https://t.me/asya_forwomen_bot?start=advent">Забрать адвент в Telegram</a>
+      <p class="note">Оплата и доступ в Telegram-боте. Скилл по монтажу ты получаешь сразу после оплаты, остальные окошки — по календарю в декабре. Условия — в <a href="https://telegra.ph/Usloviya-dostupa-k-AI-sovetniku-Asya-Secret-06-07" target="_blank" rel="noopener">публичной оферте</a>.</p>
     </div>
     <div class="treebox" aria-hidden="true"><canvas class="tree" id="tree"></canvas></div>
   </section>
 </main>
 
 <footer class="wrap">
-  <p class="docs"><a href="https://telegra.ph/Usloviya-dostupa-k-AI-sovetniku-Asya-Secret-06-07" target="_blank" rel="noopener">Публичная оферта</a> · оплата в Telegram-боте @asya_forwomen_bot</p>
+  <p class="docs"><a href="https://telegra.ph/Usloviya-dostupa-k-AI-sovetniku-Asya-Secret-06-07" target="_blank" rel="noopener">Публичная оферта</a> · оплата в Telegram-боте @asya_forwomen_bot</p>
   <div>Asya Secret · Секретный адвент</div>
 </footer>
 
@@ -544,32 +557,32 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
     <h3 id="dtitle"></h3>
     <p id="ddesc"></p>
     <div class="when" id="dwhen"></div>
-    <div class="acts"><a class="btn tobuy" href="#buy">Забрать все 12 · 3 900 ₽</a></div>
+    <div class="acts"><a class="btn tobuy" href="#buy">Забрать все 12 · 3 900 ₽</a></div>
   </div>
 </div>
 
 <div class="secret" id="secret" role="dialog" aria-modal="true" aria-labelledby="stitle">
   <button class="close" id="sclose" type="button" aria-label="Закрыть">×</button>
   <img src="assets/goat.webp" alt="" width="240" height="222">
-  <p class="eyebrow">Ты нашла секрет</p>
-  <h3 id="stitle">Золотая козочка — символ 2027 года</h3>
-  <p>Её подарок — скидка на стратегическую сессию по твоему блогу с Асей.</p>
-  <div class="offer"><div class="what">3 часа вместе: разбираем твой блог и строим контентные линии</div><div class="pr"><s>12 900 ₽</s><b>9 000 ₽</b></div></div>
-  <p class="small">Скидка 3 900 ₽ — ровно цена адвента. Пойдёшь на сессию, и адвент окупится полностью.</p>
+  <p class="eyebrow">Ты нашла секрет</p>
+  <h3 id="stitle">Золотая козочка — символ 2027 года</h3>
+  <p>Её подарок — скидка на стратегическую сессию по твоему блогу с Асей.</p>
+  <div class="offer"><div class="what">3 часа вместе: разбираем твой блог и строим контентные линии</div><div class="pr"><s>12 900 ₽</s><b>9 000 ₽</b></div></div>
+  <p class="small">Скидка 3 900 ₽ — ровно цена адвента. Пойдёшь на сессию, и адвент окупится полностью.</p>
   <div class="code"><b id="scode">КОЗОЧКА</b><button type="button" id="scopy">Скопировать</button></div>
-  <p class="small">Сделай скрин этой карточки и пришли его Асе в Telegram <a href="https://t.me/andalusia_espana">@andalusia_espana</a>, она закрепит за тобой скидку. Для тех, кто купил адвент, действует до 6 февраля.</p>
+  <p class="small">Сделай скрин этой карточки и пришли его Асе в Telegram <a href="https://t.me/andalusia_espana">@andalusia_espana</a>, она закрепит за тобой скидку. Для тех, кто купил адвент, действует до 6 февраля.</p>
   <a class="btn tobuy" href="#buy">Забрать адвент</a>
   <a class="btn line shot" href="https://t.me/andalusia_espana">Отправить скрин Асе</a>
 </div>
 <canvas id="sky" aria-hidden="true"></canvas>
 
-<div class="sticky" id="sticky"><span><span class="p">3 900 ₽</span><small>ещё <b class="tt">–</b></small></span><a class="btn tobuy" href="#buy">Забрать адвент</a></div>
+<div class="sticky" id="sticky"><span><span class="p">3 900 ₽</span><small>ещё <b class="tt">–</b></small></span><a class="btn tobuy" href="#buy">Забрать адвент</a></div>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="gk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8A6A2E"/><stop offset=".45" stop-color="#F3E1AE"/><stop offset="1" stop-color="#A8823F"/></linearGradient>
 <symbol id="key" viewBox="0 0 40 16"><circle cx="7" cy="8" r="5" fill="none" stroke="url(#gk)" stroke-width="2.2"/><path d="M12 8h24M29 8v4M33 8v3" stroke="url(#gk)" stroke-width="2.2" fill="none" stroke-linecap="round"/></symbol></defs></svg>
 
 <script>
-var WIN=[{"role": "Монтажёр", "title": "Монтаж рилс", "desc": "Вырезает паузы и оговорки, ставит субтитры, зумы, картинки и звук. На выходе готовый ролик.", "bs": "1923px 2403px", "bp": "-133px -863px"}, {"role": "Сценарист", "title": "Рилс из исследования", "desc": "Пишет сценарий ролика на основе реального исследования или эксперимента: факт, история, вывод.", "bs": "2299px 2872px", "bp": "-672px -1089px"}, {"role": "Сценарист", "title": "Генератор хуков", "desc": "Пишет первые секунды ролика, на которых человек решает, смотреть или листать.", "bs": "1923px 2403px", "bp": "-133px -1331px"}, {"role": "Копирайтер и редактор", "title": "Твой голос", "desc": "Собирает профиль твоего стиля по твоим текстам, чтобы ИИ писал как ты.", "bs": "2299px 2872px", "bp": "-672px -1605px"}, {"role": "Копирайтер и редактор", "title": "Живой текст", "desc": "Убирает нейросетевой тон: текст звучит как человек, а не как робот.", "bs": "1923px 2403px", "bp": "-133px -1788px"}, {"role": "Дизайнер", "title": "Обложки и карусели", "desc": "Делает обложки рилс и слайды каруселей с аккуратной кириллицей.", "bs": "2299px 2872px", "bp": "-672px -2151px"}, {"role": "SMM-менеджер", "title": "Шапка профиля", "desc": "Разбирает твою шапку профиля и пишет новую, после которой понятно, зачем подписываться.", "bs": "2380px 2974px", "bp": "-1304px -1130px"}, {"role": "SMM-менеджер", "title": "Контент-план на месяц", "desc": "Составляет план для Instagram и Telegram таблицей, по которой можно сразу работать.", "bs": "1997px 2495px", "bp": "-1459px -898px"}, {"role": "Копирайтер и редактор", "title": "Продающий пост", "desc": "Пишет пост для Instagram твоим голосом, который ведёт к покупке.", "bs": "2380px 2974px", "bp": "-1304px -1664px"}, {"role": "Менеджер по продажам", "title": "Продажи в директе", "desc": "Подсказывает ответы клиентам без давления: понять задачу и предложить одно решение.", "bs": "1997px 2495px", "bp": "-1459px -1384px"}, {"role": "SMM-менеджер", "title": "Тренды под нишу", "desc": "Находит свежие тренды и инфоповоды под твою нишу, с проверкой дат и источников.", "bs": "2380px 2974px", "bp": "-1304px -2230px"}, {"role": "Моушен-дизайнер", "title": "Моушен", "desc": "Оживляет стикеры: GIF, MP4 и видеостикеры для Telegram.", "bs": "1997px 2495px", "bp": "-1459px -1859px"}];
+var WIN=[{"role": "Монтажёр", "title": "Монтаж рилс", "desc": "Вырезает паузы и оговорки, ставит субтитры, зумы, картинки и звук. На выходе готовый ролик.", "bs": "1923px 2403px", "bp": "-133px -863px"}, {"role": "Сценарист", "title": "Рилс из исследования", "desc": "Пишет сценарий ролика на основе реального исследования или эксперимента: факт, история, вывод.", "bs": "2299px 2872px", "bp": "-672px -1089px"}, {"role": "Сценарист", "title": "Генератор хуков", "desc": "Пишет первые секунды ролика, на которых человек решает, смотреть или листать.", "bs": "1923px 2403px", "bp": "-133px -1331px"}, {"role": "Копирайтер и редактор", "title": "Твой голос", "desc": "Собирает профиль твоего стиля по твоим текстам, чтобы ИИ писал как ты.", "bs": "2299px 2872px", "bp": "-672px -1605px"}, {"role": "Копирайтер и редактор", "title": "Живой текст", "desc": "Убирает нейросетевой тон: текст звучит как человек, а не как робот.", "bs": "1923px 2403px", "bp": "-133px -1788px"}, {"role": "Дизайнер", "title": "Обложки и карусели", "desc": "Делает обложки рилс и слайды каруселей с аккуратной кириллицей.", "bs": "2299px 2872px", "bp": "-672px -2151px"}, {"role": "SMM-менеджер", "title": "Шапка профиля", "desc": "Разбирает твою шапку профиля и пишет новую, после которой понятно, зачем подписываться.", "bs": "2380px 2974px", "bp": "-1304px -1130px"}, {"role": "SMM-менеджер", "title": "Контент-план на месяц", "desc": "Составляет план для Instagram и Telegram таблицей, по которой можно сразу работать.", "bs": "1997px 2495px", "bp": "-1459px -898px"}, {"role": "Копирайтер и редактор", "title": "Продающий пост", "desc": "Пишет пост для Instagram твоим голосом, который ведёт к покупке.", "bs": "2380px 2974px", "bp": "-1304px -1664px"}, {"role": "Менеджер по продажам", "title": "Продажи в директе", "desc": "Подсказывает ответы клиентам без давления: понять задачу и предложить одно решение.", "bs": "1997px 2495px", "bp": "-1459px -1384px"}, {"role": "SMM-менеджер", "title": "Тренды под нишу", "desc": "Находит свежие тренды и инфоповоды под твою нишу, с проверкой дат и источников.", "bs": "2380px 2974px", "bp": "-1304px -2230px"}, {"role": "Моушен-дизайнер", "title": "Моушен", "desc": "Оживляет стикеры: GIF, MP4 и видеостикеры для Telegram.", "bs": "1997px 2495px", "bp": "-1459px -1859px"}];
 var OPEN=[0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21];
 (function(){
   var cs=document.getElementById('case'), seal=document.getElementById('seal'), under=document.getElementById('under');
@@ -965,7 +978,10 @@ var OPEN=[0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21];
   function upd(){ var ms=Math.max(0,end-Date.now()), ss=Math.floor(ms/1000), d=Math.floor(ss/86400), h=Math.floor(ss%86400/3600), m=Math.floor(ss%3600/60), sc=ss%60;
     document.getElementById('d').textContent=d; document.getElementById('h').textContent=pad(h); document.getElementById('m').textContent=pad(m);
     var se=document.getElementById('s'); se.textContent=pad(sc); if(!reduce){ se.classList.remove('tick'); void se.offsetWidth; se.classList.add('tick'); }
-    var t=d+' дн '+pad(h)+':'+pad(m)+':'+pad(sc); var tt=document.querySelectorAll('.tt'); for(var i=0;i<tt.length;i++){ tt[i].textContent=t; } }
+    var t=d+' дн '+pad(h)+':'+pad(m)+':'+pad(sc); var tt=document.querySelectorAll('.tt'); for(var i=0;i<tt.length;i++){ tt[i].textContent=t; }
+    function put(c,v){ var n=document.querySelectorAll(c); for(var k=0;k<n.length;k++) n[k].textContent=v; }
+    put('.cd-d',d); put('.cd-h',pad(h)); put('.cd-m',pad(m)); put('.cd-s',pad(sc));
+    if(!reduce){ var cs=document.querySelectorAll('.cd-s'); for(var k=0;k<cs.length;k++){ cs[k].classList.remove('tick'); void cs[k].offsetWidth; cs[k].classList.add('tick'); } } }
   upd(); setInterval(upd,1000);
 
   var st=document.getElementById('sticky'), hero=document.querySelector('.hero');
