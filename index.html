@@ -209,6 +209,13 @@ h2{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(
 @keyframes flipin{from{opacity:0;transform:perspective(300px) rotateY(80deg)}to{opacity:1;transform:none}}
 .calwrap{display:grid;grid-template-columns:1fr minmax(300px,420px);gap:56px;align-items:center}
 .cal{background:#FBF5EE;border:1px solid rgba(196,160,100,.6);outline:1px solid rgba(196,160,100,.3);outline-offset:-8px;border-radius:18px;padding:24px 22px 20px}
+.cal{position:relative}
+.cal .deco{position:absolute;pointer-events:none;z-index:2;height:auto;filter:drop-shadow(0 8px 10px rgba(40,10,10,.25))}
+.cal .d1{left:-9%;top:-58px;width:56%;transform-origin:8% 30%;animation:sway 6s ease-in-out infinite}
+.cal .d2{right:-8%;bottom:-38px;width:42%;transform:scaleX(-1) rotate(-6deg);transform-origin:90% 30%;opacity:.95}
+@keyframes sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(1.2deg)}}
+@media (prefers-reduced-motion:reduce){.cal .d1{animation:none}}
+.cal .sp{z-index:2}
 .cal .mon{font-family:var(--display);font-style:italic;font-size:26px;text-align:center;margin-bottom:12px}
 .cal .wd,.cal .grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
 .cal .wd span{font-size:10px;letter-spacing:.18em;text-transform:uppercase;text-align:center;color:#9a7a80;padding-bottom:4px}
@@ -454,6 +461,9 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
         <p class="intro">Скилл по монтажу ты получаешь сразу после оплаты. Остальные одиннадцать окошек открываются в декабре, по одному через день, в закрытом Telegram-канале. Нажми на дату и увидишь, что откроется в этот день.</p>
       </div>
       <div class="cal" id="calbox">
+        <img class="deco d1" src="assets/deco_sprig.webp" alt="" width="620" height="249" loading="lazy">
+        <img class="deco d2" src="assets/deco_sprig.webp" alt="" width="620" height="249" loading="lazy">
+        <i class="sp" style="left:88%;top:8%"></i><i class="sp" style="left:4%;top:48%;animation-delay:1.4s;transform:scale(.6)"></i>
         <div class="mon">Декабрь 2026</div>
         <div class="wd"><span>пн</span><span>вт</span><span>ср</span><span>чт</span><span>пт</span><span>сб</span><span>вс</span></div>
         <div class="grid" id="calgrid"></div>
