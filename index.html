@@ -67,13 +67,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--champagne);outline-
 .doors{position:absolute;inset:0;transform-style:preserve-3d;pointer-events:none}
 .door{position:absolute;top:0;bottom:0;width:50%;background:
   repeating-linear-gradient(115deg,rgba(255,255,255,.025) 0 2px,rgba(0,0,0,.035) 2px 4px),
-  linear-gradient(165deg,#86202f,#5c1220 55%,#430a15);box-shadow:inset 0 0 60px rgba(0,0,0,.35);transition:transform 1.9s cubic-bezier(.62,0,.2,1);backface-visibility:hidden}
+  linear-gradient(165deg,#86202f,#5c1220 55%,#430a15);box-shadow:inset 0 0 60px rgba(0,0,0,.35);transition:transform 2.35s cubic-bezier(.6,0,.18,1);backface-visibility:hidden}
 .door::after{content:"";position:absolute;inset:12px;border:1px solid rgba(196,160,100,.65);border-radius:6px}
 .door.l{left:0;border-radius:14px 0 0 14px;transform-origin:left center}
 .door.r{right:0;border-radius:0 14px 14px 0;transform-origin:right center}
 .case.open .door.l{transform:rotateY(-104deg)}
 .case.open .door.r{transform:rotateY(104deg)}
-.rib{position:absolute;background:linear-gradient(90deg,#E2CBA8,#FBF0DD 45%,#CCAE86);box-shadow:0 0 10px rgba(0,0,0,.35);transition:transform .95s cubic-bezier(.6,0,.3,1) .15s,opacity .4s ease .9s}
+.rib{position:absolute;background:linear-gradient(90deg,#E2CBA8,#FBF0DD 45%,#CCAE86);box-shadow:0 0 10px rgba(0,0,0,.35);transition:transform 1.15s cubic-bezier(.6,0,.3,1) .15s,opacity .45s ease 1.05s}
 .rib.vt,.rib.vb{left:50%;width:8%;margin-left:-4%;height:50%}
 .rib.vt{top:0;transform-origin:top}.rib.vb{bottom:0;transform-origin:bottom}
 .rib.hl,.rib.hr{top:50%;height:6.4%;margin-top:-3.2%;width:50%;background:linear-gradient(180deg,#E2CBA8,#FBF0DD 45%,#CCAE86)}
@@ -540,8 +540,8 @@ var OPEN=[0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21];
   function openCase(){
     if(cs.classList.contains('broken')) return;
     cs.classList.add('broken'); if(window.__seal) window.__seal(); if(window.__burst) window.__burst(); if(window.__confetti){ var sr=seal.getBoundingClientRect(); window.__confetti(sr.left+sr.width/2,sr.top+sr.height/2,70); } if(window.__fly) setTimeout(function(){ window.__fly(true); }, 1600);
-    setTimeout(function(){ cs.classList.add('open'); }, reduce?0:900);
-    setTimeout(function(){ hintText.textContent='нажимай на окошки'; under.classList.add('opened-ui'); }, reduce?0:2200);
+    setTimeout(function(){ cs.classList.add('open'); }, reduce?0:1050);
+    setTimeout(function(){ hintText.textContent='нажимай на окошки'; under.classList.add('opened-ui'); }, reduce?0:2700);
   }
   seal.addEventListener('click',openCase);
   document.getElementById('reseal').addEventListener('click',function(){
