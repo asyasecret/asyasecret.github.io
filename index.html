@@ -51,6 +51,8 @@ h1{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(
 .btn.line{background:transparent;color:var(--ink);border:1px solid var(--ink);box-shadow:none}
 a:focus-visible,button:focus-visible{outline:2px solid var(--champagne);outline-offset:3px}
 .note{font-size:13px;color:#7a525a;margin:12px 0 0}
+.bonus{margin:-6px 0 22px;font-family:var(--display);font-style:italic;font-size:19px;line-height:1.35;color:var(--wine)}
+.bonus .st{font-style:normal;color:var(--champagne);margin-right:6px}
 .soon{margin:22px 0 0}
 .soon-l{margin:0 0 8px;font-size:10.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#8a5a62}
 .soon-t{display:inline-flex;align-items:baseline;gap:18px;margin:0;padding:9px 2px 8px;border-top:1px solid rgba(196,160,100,.7);border-bottom:1px solid rgba(196,160,100,.7)}
@@ -173,6 +175,9 @@ h2{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(
 .role.chief h3{color:var(--champagne-lt);font-style:italic}
 .role.chief .chips{color:var(--champagne)}
 .role.chief p{color:#ecd2c9;font-family:var(--display);font-style:italic;font-size:18px;line-height:1.45}
+.role.mentor{grid-column:1/-1;background:linear-gradient(160deg,#FFFBF3,#F6EADA);border-color:var(--champagne)}
+.role.mentor h3{font-style:italic;color:var(--wine)}
+.role.mentor .chips{color:var(--wine)}
 h1,h2,h3,.eyebrow,.intro,.lead{text-wrap:balance}
 .honest{margin:26px 0 0;font-family:var(--display);font-style:italic;font-size:20px;color:var(--wine)}
 
@@ -252,6 +257,10 @@ h1,h2,h3,.eyebrow,.intro,.lead{text-wrap:balance}
 .cal .det .d{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--wine)}
 .cal .det b{display:block;font-family:var(--display);font-weight:400;font-size:21px;margin:3px 0 2px}
 .cal .det p{margin:0;font-size:14px;color:#5a3138;line-height:1.5}
+.cal .det p.ev{margin-top:8px;color:var(--wine);font-family:var(--display);font-style:italic;font-size:15px}
+.cal .grid button.eve{position:relative}
+.cal .grid button.eve:not(.eveonly)::after{content:'\2726';position:absolute;top:2px;right:4px;font-size:9px;line-height:1;color:var(--champagne)}
+.cal .grid button.on::after{color:var(--champagne-lt)}
 .faq{max-width:760px}
 .faq details{border-bottom:1px solid rgba(196,160,100,.55)}
 .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 2px;font-family:var(--display);font-size:21px}
@@ -427,6 +436,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
       <p class="eyebrow">Новогодний адвент для экспертов и блогеров</p>
       <h1>Секретный адвент, который превращает твой ИИ в команду из 7 помощников</h1>
       <p class="lead">12 окошек — 12 готовых скиллов для твоего ИИ. Он монтирует твои рилс, пишет сценарии и посты твоим голосом, делает обложки и подсказывает, что ответить клиенту в директе. Тебе остаётся снимать и общаться.</p>
+      <p class="bonus"><span class="st" aria-hidden="true">✦</span>И ещё три вечера со мной вживую, <span style="white-space:nowrap">15–17 декабря</span></p>
       <a class="btn tobuy" href="#buy">Забрать за 3 900 ₽</a>
       <div class="soon"><p class="soon-l">цена вырастет до 4 900 ₽ через</p><p class="soon-t" aria-live="off"><span><b class="cd-d">–</b><i>дн</i></span><span><b class="cd-h">–</b><i>ч</i></span><span><b class="cd-m">–</b><i>мин</i></span><span><b class="cd-s">–</b><i>сек</i></span></p></div>
       <p class="note">Работает в Claude или Codex на платной подписке. Оплата картой, доступ — в закрытом Telegram-канале. Скилл по монтажу ты получаешь сразу после оплаты.</p>
@@ -445,6 +455,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
       <li class="role"><div class="top"><h3>Менеджер по продажам</h3><span class="chips">окошко 10</span></div><p>Подсказывает, что ответить в директе, чтобы понять задачу человека и предложить одно решение без давления.</p><p class="ins">Вместо «я подумаю» и пропавших клиентов.</p></li>
       <li class="role"><div class="top"><h3>Моушен-дизайнер</h3><span class="chips">окошко 12</span></div><p>Оживляет стикеры и надписи: GIF, MP4 и видеостикеры для Telegram.</p><p class="ins">Вместо заказа у дизайнера на каждую мелочь.</p></li>
       <li class="role chief"><div class="top"><h3>Главный редактор</h3><span class="chips">это ты</span></div><p>ИИ делает черновую работу, последнее слово всегда за тобой.</p></li>
+      <li class="role mentor"><div class="top"><h3>Наставница</h3><span class="chips">это я · <span style="white-space:nowrap">15–17 декабря</span></span></div><p>Три вечера вживую. В первый разбираем, какие истории из твоей жизни продают. Во второй ИИ-команда работает прямо на эфире: из сценария получается готовый рилс. В третий — как блог превращается в деньги.</p><p class="ins">Отдельно эти вечера стоят 990 ₽, с адвентом — в подарок.</p></li>
     </ol>
   </section>
 
@@ -495,7 +506,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
       <div>
         <p class="eyebrow">Когда что открывается</p>
         <h2>Календарь окошек</h2>
-        <p class="intro">Скилл по монтажу ты получаешь сразу после оплаты. Остальные одиннадцать окошек открываются в декабре, по одному через день, в закрытом Telegram-канале. Нажми на дату и увидишь, что откроется в этот день.</p>
+        <p class="intro">Скилл по монтажу ты получаешь сразу после оплаты. Остальные одиннадцать окошек открываются в декабре, по одному через день, в закрытом Telegram-канале. Нажми на дату и увидишь, что откроется в этот день. Золотыми звёздочками отмечены три вечера со мной.</p>
       </div>
       <div class="calstage">
       <img class="deco tl" src="assets/deco_tl.webp" alt="" width="700" height="244" loading="lazy">
@@ -519,6 +530,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
       <details><summary>В каком ИИ это работает?</summary><p>В Claude или в Codex — он входит в платный ChatGPT. Нужна платная подписка на один из них.</p></details>
       <details><summary>Я не дружу с техникой. Справлюсь?</summary><p>Да. Скилл загружается в Claude или Codex один раз, а дальше ты просто пишешь задачу обычными словами: «смонтируй этот ролик», «напиши пост моим голосом». К каждому скиллу есть видеоинструкция и пример результата, программировать ничего не нужно.</p></details>
       <details><summary>Когда открываются окошки?</summary><p>Скилл по монтажу ты получаешь сразу после оплаты. Остальные одиннадцать окошек открываются по одному через день, с 1 по 21 декабря, в закрытом Telegram-канале. Все даты есть в календаре выше.</p></details>
+      <details><summary>Что за три вечера в декабре?</summary><p>15, 16 и 17 декабря я провожу три прямых эфира по полтора часа, вечером по Москве. Первый вечер — какие истории из твоей жизни продают и как их найти, с живыми разборами участниц. Второй — ИИ-команда в деле: из сценария в готовый смонтированный рилс прямо на эфире. Третий — как блог превращается в деньги: кодовое слово, прогрев и продажа в личке. Эфиры входят в адвент, ссылка придёт в закрытый канал, и запись останется там же.</p></details>
       <details><summary>Что, если я не успею разобраться в декабре?</summary><p>Ничего не сгорает. Скиллы ты скачиваешь себе, и они остаются у тебя: пользуйся, когда будет время.</p></details>
       <details><summary>Как оплатить?</summary><p>Внизу страницы нажми «Забрать адвент», и откроется страница оплаты. Платить можно российской или зарубежной картой. Сразу после оплаты на почту придёт вход в закрытый Telegram-канал адвента, а там тебя уже ждёт скилл по монтажу.</p></details>
     </div>
@@ -532,13 +544,13 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:10px}
     </div>
     <div class="price" id="buy">
       <h2>Вся команда — за одну оплату</h2>
-      <p class="cmp">Монтажёру платишь за каждый ролик. Адвент оплачиваешь один раз, и все 12 скиллов остаются у тебя.</p>
+      <p class="cmp">Монтажёру платишь за каждый ролик. Адвент оплачиваешь один раз, и все 12 скиллов остаются у тебя. А <span style="white-space:nowrap">15–17 декабря</span> — три вечера со мной вживую, они тоже входят в адвент.</p>
       <p class="big">3 900 ₽</p>
       <p class="later">с 1 декабря — 4 900 ₽</p>
       <div class="couture" aria-live="polite"><span><b id="d">–</b>дней</span><span class="dot">·</span><span><b id="h">–</b>ч</span><span class="dot">·</span><span><b id="m">–</b>мин</span><span class="dot">·</span><span><b id="s">–</b>сек</span></div>
       <p class="cap">до 30 ноября, 23:59 по Москве</p>
       <a class="btn" id="buybtn" href="https://link.payform.ru/?paymentLinkId=b11df9ee-83a0-4c37-ac1a-5c97677b2b25">Забрать адвент</a>
-      <p class="note">Оплата российской или зарубежной картой. Сразу после оплаты на почту придёт вход в закрытый Telegram-канал: там скилл по монтажу, остальные окошки — по календарю в декабре. Условия — в <a href="oferta.html">публичной оферте</a>.</p>
+      <p class="note">Оплата российской или зарубежной картой. Сразу после оплаты на почту придёт вход в закрытый Telegram-канал: там скилл по монтажу, остальные окошки — по календарю в декабре, эфиры со мной — <span style="white-space:nowrap">15–17 декабря</span>. Условия — в <a href="oferta.html">публичной оферте</a>.</p>
     </div>
     <div class="treebox" aria-hidden="true"><canvas class="tree" id="tree"></canvas></div>
   </section>
@@ -658,13 +670,20 @@ var OPEN=[0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21];
   // december calendar: window days look like little advent doors; tap a date to see what opens
   (function(){ var grid=document.getElementById('calgrid'), det=document.getElementById('caldet'), byDay={}, btns=[];
     for(var i=1;i<WIN.length;i++) byDay[OPEN[i]]=i;
-    function show(day){ var i=byDay[day]; btns.forEach(function(b){ b.classList.toggle('on',+b.getAttribute('data-day')===day); });
-      det.innerHTML='<div class="d">'+day+' декабря · окошко '+(i+1)+' · '+WIN[i].role+'</div><b>'+WIN[i].title+'</b><p>'+WIN[i].desc+'</p>'; }
+    // three live evenings with Asya, included in the advent
+    var EVE={15:{n:1,t:'Истории, которые продают',d:'Какие истории из твоей жизни продают и как их найти, с живыми разборами участниц.'},
+             16:{n:2,t:'ИИ-команда в деле',d:'Из сценария в готовый смонтированный рилс прямо на эфире.'},
+             17:{n:3,t:'Как блог превращается в деньги',d:'Кодовое слово, прогрев и продажа в личке без давления.'}};
+    function show(day){ var i=byDay[day], ev=EVE[day]; btns.forEach(function(b){ b.classList.toggle('on',+b.getAttribute('data-day')===day); });
+      if(i) det.innerHTML='<div class="d">'+day+' декабря · окошко '+(i+1)+' · '+WIN[i].role+'</div><b>'+WIN[i].title+'</b><p>'+WIN[i].desc+'</p>'+(ev?'<p class="ev">✦ Вечером эфир со мной: «'+ev.t+'»</p>':'');
+      else if(ev) det.innerHTML='<div class="d">'+day+' декабря · вечер '+ev.n+' со мной</div><b>'+ev.t+'</b><p>'+ev.d+' Эфир входит в адвент, запись останется в канале.</p>'; }
     var first=new Date(2026,11,1).getDay(), lead=(first+6)%7;
     for(var k=0;k<lead;k++) grid.appendChild(document.createElement('span'));
     for(var d=1;d<=31;d++){ var el;
-      if(byDay[d]){ el=document.createElement('button'); el.type='button'; el.setAttribute('data-day',d); el.setAttribute('aria-label',d+' декабря, окошко '+(byDay[d]+1)+': '+WIN[byDay[d]].title);
-        el.innerHTML='<small>'+d+'</small><em>'+(byDay[d]+1)+'</em>'; (function(dd){ el.addEventListener('click',function(){ show(dd); }); })(d); btns.push(el); }
+      if(byDay[d]||EVE[d]){ el=document.createElement('button'); el.type='button'; el.setAttribute('data-day',d);
+        el.setAttribute('aria-label',d+' декабря, '+(byDay[d]?'окошко '+(byDay[d]+1)+': '+WIN[byDay[d]].title+(EVE[d]?', вечером эфир со мной':''):'вечер со мной: '+EVE[d].t));
+        if(EVE[d]) el.className='eve'+(byDay[d]?'':' eveonly');
+        el.innerHTML='<small>'+d+'</small><em>'+(byDay[d]?(byDay[d]+1):'✦')+'</em>'; (function(dd){ el.addEventListener('click',function(){ show(dd); }); })(d); btns.push(el); }
       else if(d===31){ el=document.createElement('span'); el.className='ny'; el.textContent='★'; el.title='Новый год'; }
       else { el=document.createElement('span'); el.textContent=d; }
       grid.appendChild(el); }
@@ -1055,12 +1074,17 @@ var OPEN=[0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21];
     wp.push([side,Math.max(nightTop+60,nr.t+40),1],[side,tb[1]-rc-80,1],[side,tb[1]-rc,1]);
     for(var k=1;k<=4;k++){ var an=k/4*Math.PI/2; wp.push([side+dr*rc*(1-Math.cos(an)), tb[1]-rc+rc*Math.sin(an),1]); }
     wp.push([side+dr*(rc+(Math.abs(tb[0]-side)-rc)*.5),tb[1],1],[tb[0],tb[1],1]); ENDY=tb[1];
+    // waypoints closer than 14px merge into the later one: two nearly equal points (one of them a step back) made the ribbon fold over itself
+    var wq=[wp[0]]; for(var i=1;i<wp.length;i++){ var lq=wq[wq.length-1]; if(Math.hypot(wp[i][0]-lq[0],wp[i][1]-lq[1])<14) wq[wq.length-1]=wp[i]; else wq.push(wp[i]); } wp=wq;
+    // centripetal Catmull-Rom: no overshoot or loops where a long run meets a short one (the stub before the turn to the tree)
+    function ctl(a,b){ return Math.max(1e-3,Math.sqrt(Math.hypot(b[0]-a[0],b[1]-a[1]))); }
+    function lerp(a,b,ta,tb,u){ var k=(u-ta)/(tb-ta); return [a[0]+(b[0]-a[0])*k, a[1]+(b[1]-a[1])*k]; }
     var dense=[];
-    for(var i=0;i<wp.length-1;i++){ var p0=wp[Math.max(0,i-1)], p1=wp[i], p2=wp[i+1], p3=wp[Math.min(wp.length-1,i+2)], f=p1[2]&&p2[2]?1:0;
-      for(var s=0;s<14;s++){ var t=s/14, t2=t*t, t3=t2*t;
-        var x=.5*((2*p1[0])+(-p0[0]+p2[0])*t+(2*p0[0]-5*p1[0]+4*p2[0]-p3[0])*t2+(-p0[0]+3*p1[0]-3*p2[0]+p3[0])*t3);
-        var y=.5*((2*p1[1])+(-p0[1]+p2[1])*t+(2*p0[1]-5*p1[1]+4*p2[1]-p3[1])*t2+(-p0[1]+3*p1[1]-3*p2[1]+p3[1])*t3);
-        dense.push([x,y,f]); } }
+    for(var i=0;i<wp.length-1;i++){ var p1=wp[i], p2=wp[i+1], p0=i>0?wp[i-1]:[2*p1[0]-p2[0],2*p1[1]-p2[1]], p3=i+2<wp.length?wp[i+2]:[2*p2[0]-p1[0],2*p2[1]-p1[1]], f=p1[2]&&p2[2]?1:0;
+      var t0=0, t1=ctl(p0,p1), t2=t1+ctl(p1,p2), t3=t2+ctl(p2,p3);
+      for(var s=0;s<14;s++){ var u=t1+(t2-t1)*s/14;
+        var A1=lerp(p0,p1,t0,t1,u), A2=lerp(p1,p2,t1,t2,u), A3=lerp(p2,p3,t2,t3,u), B1=lerp(A1,A2,t0,t2,u), B2=lerp(A2,A3,t1,t3,u), C=lerp(B1,B2,t1,t2,u);
+        dense.push([C[0],C[1],f]); } }
     dense.push(wp[wp.length-1]);
     X=[];Y=[];S=[];F=[];MY=[]; var acc=0, px=dense[0][0], py=dense[0][1], carry=0;
     X.push(px);Y.push(py);S.push(0);F.push(dense[0][2]);
@@ -1068,11 +1092,13 @@ var OPEN=[0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21];
       var u=3-carry; while(u<=d){ X.push(px+dx*u/d); Y.push(py+dy*u/d); acc+=3; S.push(acc); F.push(dense[j][2]); u+=3; }
       carry=d-(u-3); px=dense[j][0]; py=dense[j][1]; }
     N=X.length; var m=-1e9; for(var q=0;q<N;q++){ m=Math.max(m,Y[q]); MY.push(m); }
-    HW=[];NX=[];NY=[];KB=[];HC=[];FACE=[];
+    HW=[];NX=[];NY=[];KB=[];HC=[];FACE=[]; var ang0=0;
     for(var q=0;q<N;q++){ var a=Math.max(0,q-1), b=Math.min(N-1,q+1), dx=X[b]-X[a], dy=Y[b]-Y[a], l=Math.hypot(dx,dy)||1, tw=S[q]/92, c=Math.cos(tw);
+      // direction angle kept continuous: at the top of the loop atan2 jumps by a full turn, which cut the shine into a hard seam
+      var ang=Math.atan2(dy,dx); if(q){ while(ang-ang0>Math.PI) ang-=6.2832; while(ang-ang0<-Math.PI) ang+=6.2832; } ang0=ang;
       NX.push(-dy/l); NY.push(dx/l); FACE.push(c>0);
       HW.push(Wd*.5*(.14+.86*Math.abs(c))*Math.pow(Math.min(1,(N-1-q)/45),.7));
-      var lum=.5+.5*Math.sin(tw*1.3+Math.atan2(dy,dx)*.35), tail=Math.max(0,1-(N-1-q)/60); lum=lum*(1-tail)+tail; KB.push(Math.max(0,Math.min(47,Math.round(lum*47))));
+      var lum=.5+.5*Math.sin(tw*1.3+ang*.35), tail=Math.max(0,1-(N-1-q)/60); lum=lum*(1-tail)+tail; KB.push(Math.max(0,Math.min(47,Math.round(lum*47))));
       HC.push(.5*Math.sin(tw*1.9+.6)); }
     // tiles: each 640px band of the page gets its own small canvas per layer, sized to the ribbon inside it
     LB.style.height=LF.style.height=DOCH+'px';
