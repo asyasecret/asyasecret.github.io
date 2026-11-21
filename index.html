@@ -1119,15 +1119,17 @@ var OPEN=[0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21];
       // the curl: one full turn plus a quarter, drifting sideways a little, so the ribbon leaves it already heading across
       for(var k=0,K=28;k<=K;k++){ var u=k/K, an=6.2832*1.25*u, ph=dir>0?Math.PI-an:an;
         wp.push([c0+Math.cos(ph)*loopR+dir*u*loopR*0.6, cy0+Math.sin(ph)*loopR*.8+u*loopR*0.3,1,k<K?2:0,1]); }
-      wp.push([(side+other)/2, gm+(g1-g0)*.1,1],[other,g0+(g1-g0)*.86,1]); side=other; })();
+      wp.push([(side+other)/2, gm+(g1-g0)*.1,1],[other,g0+(g1-g0)*.86,1,1]); side=other; })();
     secs.forEach(function(sec,i){
       var cbx=contentBox(sec), next=secs[i+1]||night, nb=next===night?{t:nightTop}:contentBox(next);
-      wp.push([side,cbx.t+10,0],[side,cbx.b-10,0]);
       var crossHere=(i===0||next===night||(sec.id==='me'));
+      // a short hop between a long run and a crossing made the uniform spline overshoot into a hairpin at the ends of
+      // the crossings (seen on phones around the evenings block): those two hops are centripetal, the runs stay as they were
+      wp.push([side,cbx.t+10,0],[side,cbx.b-10,0,crossHere?1:0]);
       if(!crossHere) return;
       var g0=cbx.b, g1=nb.t, gm=(g0+g1)/2, other=side===L?R:L, dir=side===L?1:-1;
       wp.push([side,g0+(g1-g0)*.18,1]);
-      wp.push([(side+other)/2, gm+(g1-g0)*.12,1],[other,g0+(g1-g0)*.82,1]);
+      wp.push([(side+other)/2, gm+(g1-g0)*.12,1],[other,g0+(g1-g0)*.82,1,1]);
       side=other;
     });
     var tr=rect(tree), tb=[tr.l+tr.w/2, tr.t+tr.h*.84];
